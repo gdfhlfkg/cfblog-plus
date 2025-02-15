@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
-		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script>
-		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		<script>
+    			MathJax = {
+      				tex: {
+        				inlineMath: [['\\(', '\\)']],  // 行内公式分隔符
+        				displayMath: [['$$', '$$'], ['\\[', '\\]']],  // 块级公式分隔符
+        				processEscapes: true,  // 允许使用 \ 转义特殊字符
+     				 },
+      				options: {
+        				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],  // 跳过这些标签
+     				 },
+   			 };
+  		</script>
+  		<!-- 引入 MathJax -->
+  		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="renderer" content="webkit">
