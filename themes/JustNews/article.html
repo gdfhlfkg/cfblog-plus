@@ -5,12 +5,12 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="renderer" content="webkit">
 		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
-		<title>{{ &title }}</title>
-		<meta name="keywords" content="{{ &keyWords }}" />
-		<meta name="description" content="{{ &OPT.siteDescription }}" />
+		<title>铁的氢氧化物 - 博客文章</title>
+		<meta name="keywords" content="铁,化学" />
+		<meta name="description" content="FXTMC的博客" />
 
-		<link rel='stylesheet' id='stylesheet-css' href='{{ &OPT.theme_github_path }}JustNews/files/main.css' type='text/css' media='all' />
-		<link rel='stylesheet' id='font-awesome-css' href='{{ &OPT.theme_github_path }}JustNews/files/font-awesome.css?ver=6.1.2' type='text/css' media='all' />
+		<link rel='stylesheet' id='stylesheet-css' href='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/main.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='font-awesome-css' href='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/font-awesome.css?ver=6.1.2' type='text/css' media='all' />
 		<link rel='stylesheet' id='wp-block-library-css' href='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/block-library/style.min.css?ver=5.6' type='text/css' media='all' />
 		<link rel='stylesheet' id='wp-components-css' href='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/components/style.min.css?ver=5.6' type='text/css' media='all' />
 		<link rel='stylesheet' id='wp-editor-font-css' href='https://fonts.geekzu.org/css?family=Noto+Serif%3A400%2C400i%2C700%2C700i&#038;ver=5.6' type='text/css' media='all' />
@@ -18,26 +18,16 @@
 		<link rel='stylesheet' id='wp-nux-css' href='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/nux/style.min.css?ver=5.6' type='text/css' media='all' />
 		<link rel='stylesheet' id='wp-editor-css' href='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/css/dist/editor/style.min.css?ver=5.6' type='text/css' media='all' />
 		<link rel='stylesheet' id='mux_video_block_style-css' href='https://cdn.jsdelivr.net/gh/newexsexy/wp@master/wp-content/plugins/ilab-media-tools/public/blocks/mediacloud-mux.blocks.style.min.css' type='text/css' media='all' />
-		<script>
- 			 MathJax = {
-   				 tex: {
-      					inlineMath: [['\\(', '\\)']],
-      					displayMath: [['$$', '$$'], ['\\[', '\\]']],
-     					 processEscapes: true,
-    				},
-    			options: {
-      				skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-    				},
-  			};
-		</script>
-		<script id='MathJax-script' defer src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'></script>
+		
 		<link rel='stylesheet' id='emojify-css' href='https://cdn.jsdelivr.net/npm/emojify.js@1.1.0/dist/css/basic/emojify.min.css?ver=1.1.0' type='text/css' media='all' />
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.6/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
 		<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/wpcom-cn/assets/fonts/icons-2.6.4.js?ver=6.1.2' id='wpcom-icons-js'></script>
 		<link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.3.2/styles/tomorrow-night-bright.min.css">
 		<script src='https://cdn.staticfile.org/highlight.js/10.3.2/highlight.min.js'></script>
-		{{ &OPT.codeBeforHead }}
+		
+  <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+  <style>topflag {color:#ff5722}</style>
 	</head>
 	<body class="archive paged category category-zhishi category-5 paged-2 category-paged-2 lang-cn el-boxed">
 		<header class="header">
@@ -49,21 +39,13 @@
 						<span class="icon-bar icon-bar-3"></span>
 					</button>
 					<div class="logo">
-						{{ #OPT.logo }}
-						<a href="/" rel="home"><img src="{{ &OPT.logo }}" alt="{{ &OPT.siteName }}"></a>
-						{{ /OPT.logo }}
+						<a href="/" rel="home"><img src="https://www.harmonyos.com/resource/image/release2/home/harmonyOS_logo.png" alt="博客文章"></a>
 						
-						{{ ^OPT.logo }}
-						<a href="/" rel="home"><img src="{{ &OPT.theme_github_path }}JustNews/files/logo2.png" alt="请自定义OPT.logo"></a>
-						{{ /OPT.logo }}
 					</div>
 				</div>
 				<div class="collapse navbar-collapse">
 					<nav class="navbar-left primary-menu">
 						<ul id="menu-%e5%af%bc%e8%88%aa" class="nav navbar-nav wpcom-adv-menu">
-							{{ #widgetMenuList }}
-								<li class="menu-item"><a href="{{ &url }}">{{ &title }}</a></li>
-							{{ /widgetMenuList }}
 						</ul>
 					</nav>
 					<div class="navbar-action pull-right">
@@ -79,39 +61,109 @@
 
 
 				<div class="main">
-					<article id="post-{{ &articleSingle.id }}" class="post-{{ &articleSingle.id }} post type-post status-publish format-standard has-post-thumbnail hentry ">
+					<article id="post-000003" class="post-000003 post type-post status-publish format-standard has-post-thumbnail hentry ">
 						<div class="entry">
 							<div class="entry-head">
-								<h1 class="entry-title">{{ &articleSingle.title }}</h1>
+								<h1 class="entry-title">铁的氢氧化物</h1>
 								<div class="entry-info">
-									<time class="entry-date published" datetime="{{ &articleSingle.createDate }}" pubdate="">{{ &articleSingle.createDate10 }}</time>
+									<time class="entry-date published" datetime="2024-12-26 18:22" pubdate="">2024-12-26</time>
 									<span class="dot">•</span>
-									{{ #articleSingle.category }}
-										<a href="/category/{{&.}}" rel="category tag">{{&.}}</a>
-									{{ /articleSingle.category }}
+										<a href="/category/化学" rel="category tag">化学</a>
 									<span class="dot">•</span>
-									<span id="{{ &articleSingle.url }}" class="leancloud_visitors">
-										<em>{{ &OPT.otherCodeA }}</em>
+									<span id="/article/000003/.html" class="leancloud_visitors">
+										<em>热度</em>
 										<i class="leancloud-visitors-count"></i>
 									</span>
 								</div>
 							</div>
 							<div class="entry-content">
-								{{ &articleSingle.contentHtml }}
+								<h1 id="h1-fe-oh-fe-oh-"><a name="Fe(OH)₂与Fe(OH)₃的区别" class="reference-link"></a><span class="header-link octicon octicon-link"></span>Fe(OH)₂与Fe(OH)₃的区别</h1><p>以下是包含补充说明的完整对比表格：</p>
+<table>
+<thead>
+<tr>
+<th><strong>性质</strong></th>
+<th><strong>Fe(OH)₂</strong></th>
+<th><strong>Fe(OH)₃</strong></th>
+<th><strong>补充说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>化学式</strong></td>
+<td>Fe(OH)₂</td>
+<td>Fe(OH)₃</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>铁氧化态</strong></td>
+<td>+2价</td>
+<td>+3价</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>颜色</strong></td>
+<td>白色或灰白色（易氧化变为灰绿→红褐色）</td>
+<td>红褐色或棕色</td>
+<td>Fe(OH)₂暴露在空气中，迅速氧化；颜色从白色→灰绿色→最终变为红褐色的Fe(OH)₃。</td>
+</tr>
+<tr>
+<td><strong>溶解性</strong></td>
+<td>不溶于水</td>
+<td>不溶于水</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>与酸反应</strong></td>
+<td>生成Fe²+（如FeCl₂）和水</td>
+<td>生成Fe³+（如FeCl₃）和水</td>
+<td>Fe(OH)₂ + 2HCl → FeCl₂ + 2H₂O；Fe(OH)₃ + 3HCl → FeCl₃ + 3H₂O</td>
+</tr>
+<tr>
+<td><strong>稳定性</strong></td>
+<td>不稳定，易被氧化（需隔绝空气保存）</td>
+<td>相对稳定，空气中不易分解</td>
+<td>Fe(OH)₂需在惰性气体（如N₂）保护下制备，而Fe(OH)₃可直接通过Fe³+与OH⁻反应生成。</td>
+</tr>
+<tr>
+<td><strong>制备方法</strong></td>
+<td>Fe²+溶液与碱反应（需隔绝氧气）</td>
+<td>Fe³+溶液与碱直接反应（无需特殊条件）</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>氧化性/还原性</strong></td>
+<td>强还原性，易被氧化为Fe(OH)₃</td>
+<td>弱氧化性，可被强还原剂还原</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>应用</strong></td>
+<td>实验室研究、中间体（应用较少）</td>
+<td>净水剂、颜料、制备其他铁化合物原料</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>两性性质</strong></td>
+<td>非两性氢氧化物</td>
+<td>非两性氢氧化物</td>
+<td>两者均不溶于过量强碱。</td>
+</tr>
+</tbody>
+</table>
+<p>Fe(OH)₂与Fe(OH)₃的区别</p>
+<p>名称    氢氧化亚铁 Fe(OH)₂    氢氧化铁 Fe(OH)₃<br>物理性质    白色固体，不溶于水    红褐色固体，不溶于水<br>与HCI    Fe(OH)₂+2H⁺ ⩶ Fe²⁺+2H₂O    Fe(OH)₃+3H⁺ ⩶ Fe³⁺+3H₂O<br>与稀HNO₃    3Fe(OH)₂+10HNO₃(稀) ⩶ 3Fe(OH)₃+3NO↑+8H₂O    Fe(OH)₃+3H⁺ ⩶ Fe³⁺+3H₂O<br>加热    Fe(OH)₂ ≜ FeO + H₂O    2Fe(OH)₃ ≜ Fe₂O₃ + 3H₂O<br>转化    在空气中，Fe(OH)₂能够非常迅速地被氧气氧化为 Fe(OH)₃<br>反应方程式: 4Fe(OH)₂ + O₂ + 2H₂O ⩶ 4Fe(OH)₃<br>现象：白色沉淀，迅速灰绿，最终红褐.</p>
+
 							</div>
 							<div class="entry-footer">
 								<div class="entry-tag">
-									{{ #articleSingle.tags }}
-										<a href="/tags/{{&.}}" rel="tag">{{&.}}</a>
-									{{ /articleSingle.tags }}
+										<a href="/tags/铁" rel="tag">铁</a>
 								</div>
 
 								<div class="entry-page">
 
-									{{ #articleNewer }}	
-									<div class="entry-page-prev j-lazy lazyloaded" style="background-image: url(&quot;{{ &img }}&quot;); display: block;" data-original="{{ &img }}" data-bg="{{ &img }}" fifu-width="392" fifu-height="86">
-										<a href="{{ &url }}" title="{{ &title }}" rel="prev" >
-											<span>{{ &title }}</span></a>
+									<div class="entry-page-prev j-lazy lazyloaded" style="background-image: url(&quot;https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png&quot;); display: block;" data-original="https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png" data-bg="https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png" fifu-width="392" fifu-height="86">
+										<a href="/article/000002/.html" title="test2" rel="prev" >
+											<span>test2</span></a>
 										<div class="entry-page-info">
 											<span class="pull-left">
 												<i class="wpcom-icon wi">
@@ -119,14 +171,12 @@
 														<use xlink:href="#wi-arrow-left-double"></use>
 													</svg>
 												</i>上一篇</span>
-											<span class="pull-right">{{ &createDate10 }}</span></div>
+											<span class="pull-right">2024-12-25</span></div>
 									</div>
-									{{ /articleNewer }}
 
-									{{ #articleOlder }}
-									<div class="entry-page-next j-lazy lazyloaded" style="background-image: url(&quot;{{ &img }}&quot;); display: block;" data-original="{{ &img }}" data-bg="{{ &img }}" fifu-width="392" fifu-height="86">
-										<a href="{{ &url }}" title="{{ &title }}" rel="next" >
-											<span>{{ &title }}</span></a>
+									<div class="entry-page-next j-lazy lazyloaded" style="background-image: url(&quot;https://i2.hdslb.com/bfs/archive/60df015a1941955ff8762b0770d87b6b94bd9bb3.jpg&quot;); display: block;" data-original="https://i2.hdslb.com/bfs/archive/60df015a1941955ff8762b0770d87b6b94bd9bb3.jpg" data-bg="https://i2.hdslb.com/bfs/archive/60df015a1941955ff8762b0770d87b6b94bd9bb3.jpg" fifu-width="392" fifu-height="86">
+										<a href="/article/000004/.html" title="Damn测试" rel="next" >
+											<span>Damn测试</span></a>
 										<div class="entry-page-info">
 											<span class="pull-right">下一篇
 												<i class="wpcom-icon wi">
@@ -134,13 +184,17 @@
 														<use xlink:href="#wi-arrow-right-double"></use></svg>
 												</i>
 											</span>
-											<span class="pull-left">{{ &createDate10 }}</span></div>
+											<span class="pull-left">2025-02-07</span></div>
 									</div>
-									{{ /articleOlder }}
 								</div>
 							</div>
 							<div id="comments" class="entry-comments">
-								{{ &OPT.commentCode }}
+								
+  <script>
+    //文章浏览页 添加编辑直达功能
+    $(".entry-info").append('<a style="float:right;margin-left:5px;" href="'+location.href.replace('/article/','/admin/edit/')+'" target="_blank">编辑</a>')
+  </script>
+  
 							</div>
 						</div>
 					</article>
@@ -151,37 +205,65 @@
 						<h3 class="widget-title">
 							<span>近期文章</span></h3>
 						<ul>
-							{{ #widgetRecentlyList }}
 							<li class="item">
 								<div class="item-img">
-									<a class="item-img-inner" href="{{ &url }}" title="{{ &title }}">
-										<img width="480" height="264" src="{{ &img }}" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="{{ &img }}" /></a>
+									<a class="item-img-inner" href="/article/000004/.html" title="Damn测试">
+										<img width="480" height="264" src="https://i2.hdslb.com/bfs/archive/60df015a1941955ff8762b0770d87b6b94bd9bb3.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="https://i2.hdslb.com/bfs/archive/60df015a1941955ff8762b0770d87b6b94bd9bb3.jpg" /></a>
 								</div>
 								<div class="item-content">
 									<p class="item-title">
-										<a href="{{ &url }}" title="{{ &title }}">{{ &title }}</a></p>
-									<p class="item-date">{{ &createDate10 }}</p></div>
+										<a href="/article/000004/.html" title="Damn测试">Damn测试</a></p>
+									<p class="item-date">2025-02-07</p></div>
 							</li>
-							{{ /widgetRecentlyList }}									
+							<li class="item">
+								<div class="item-img">
+									<a class="item-img-inner" href="/article/000003/.html" title="铁的氢氧化物">
+										<img width="480" height="264" src="https://ts1.cn.mm.bing.net/th?id=OVP.FgxMVqPTgD2Cvn32mFLNSAIIGG&w=160&h=90&c=7&rs=1&qlt=90&o=6&pid=1.7" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="https://ts1.cn.mm.bing.net/th?id=OVP.FgxMVqPTgD2Cvn32mFLNSAIIGG&w=160&h=90&c=7&rs=1&qlt=90&o=6&pid=1.7" /></a>
+								</div>
+								<div class="item-content">
+									<p class="item-title">
+										<a href="/article/000003/.html" title="铁的氢氧化物">铁的氢氧化物</a></p>
+									<p class="item-date">2024-12-26</p></div>
+							</li>
+							<li class="item">
+								<div class="item-img">
+									<a class="item-img-inner" href="/article/000002/.html" title="test2">
+										<img width="480" height="264" src="https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png" /></a>
+								</div>
+								<div class="item-content">
+									<p class="item-title">
+										<a href="/article/000002/.html" title="test2">test2</a></p>
+									<p class="item-date">2024-12-25</p></div>
+							</li>
+							<li class="item">
+								<div class="item-img">
+									<a class="item-img-inner" href="/article/000001/.html" title="test">
+										<img width="480" height="264" src="https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image j-lazy" alt="" title="" data-original="https://cdn.jsdelivr.net/gh/Arronlong/cdn@master/cfblog/cfblog-plus.png" /></a>
+								</div>
+								<div class="item-content">
+									<p class="item-title">
+										<a href="/article/000001/.html" title="test">test</a></p>
+									<p class="item-date">2024-12-25</p></div>
+							</li>
 						</ul>
 					</div>
 					<div id="categories-3" class="widget widget_categories">
 						<h3 class="widget-title">
 							<span>分类目录</span></h3>
 						<ul>
-							{{ #widgetCategoryList }}
 							<li class="cat-item cat-item-5 current-cat">
-								<a aria-current="page" href="/category/{{&.}}">{{&.}}</a></li>
-							{{ /widgetCategoryList }}
+								<a aria-current="page" href="/category/123">123</a></li>
+							<li class="cat-item cat-item-5 current-cat">
+								<a aria-current="page" href="/category/化学">化学</a></li>
 						</ul>
 					</div>
 					<div id="tag_cloud-3" class="widget widget_tag_cloud">
 						<h3 class="widget-title">
 							<span>标签</span></h3>
 						<div class="tagcloud">
-							{{ #widgetTagsList }}
-							<a href="/tags/{{&.}}" class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 8pt;" aria-label="{{&.}}">{{&.}}</a>
-							{{ /widgetTagsList }}
+							<a href="/tags/铁" class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 8pt;" aria-label="铁">铁</a>
+							<a href="/tags/test" class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 8pt;" aria-label="test">test</a>
+							<a href="/tags/key" class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 8pt;" aria-label="key">key</a>
 						</div>
 					</div>
 
@@ -189,12 +271,10 @@
 						<h3 class="widget-title">
 							<span>链接</span></h3>
 						<ul class='xoxo blogroll'>
-							{{ #widgetLinkList }}
-									<li><a href="{{ &url }}" target="_blank">{{ &title }}</a></li>
-							{{ /widgetLinkList }}
 						</ul>
 					</div>
-					{{ &OPT.widgetOther }}
+					
+  
 				</aside>
 			</div>
 		</div>
@@ -203,7 +283,7 @@
 				<div class="clearfix">
 					<div class="footer-col footer-col-copy">
 						<div class="copyright">
-							<p>{{ &OPT.copyRight }}</p>
+							<p>Powered by <a href="https://www.cloudflare.com">Cloudflare</p>
 						</div>
 					</div>
 					<div class="footer-col footer-col-sns">
@@ -222,19 +302,19 @@
 			</div>
 		</div>
 
-<link rel='stylesheet' id='lazyload-spinner-css' href='{{ &OPT.theme_github_path }}JustNews/files/lazyload.css?ver=3.4.9' type='text/css' media='all' />
+<link rel='stylesheet' id='lazyload-spinner-css' href='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/lazyload.css?ver=3.4.9' type='text/css' media='all' />
 <script type='text/javascript' id='main-js-extra'>
 /* <![CDATA[ */
-var _wpcom_js = {"webp":"","ajaxurl":"","theme_url":"{{ &OPT.theme_github_path }}JustNews/","slide_speed":"5000","lightbox":"1","user_card_height":"356","video_height":"482","fixed_sidebar":"1","login_url":"/admin","register_url":"/","errors":{"require":"\u4e0d\u80fd\u4e3a\u7a7a","email":"\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u7535\u5b50\u90ae\u7bb1","pls_enter":"\u8bf7\u8f93\u5165","password":"\u5bc6\u7801\u5fc5\u987b\u4e3a6~32\u4e2a\u5b57\u7b26","passcheck":"\u4e24\u6b21\u5bc6\u7801\u8f93\u5165\u4e0d\u4e00\u81f4","phone":"\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u624b\u673a\u53f7\u7801","terms":"Please read and agree with the terms","sms_code":"\u9a8c\u8bc1\u7801\u9519\u8bef","captcha_verify":"\u8bf7\u70b9\u51fb\u6309\u94ae\u8fdb\u884c\u9a8c\u8bc1","captcha_fail":"\u70b9\u51fb\u9a8c\u8bc1\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5","nonce":"\u968f\u673a\u6570\u6821\u9a8c\u5931\u8d25","req_error":"\u8bf7\u6c42\u5931\u8d25"},"follow_btn":"<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8","followed_btn":"\u5df2\u5173\u6ce8","user_card":"1"};
+var _wpcom_js = {"webp":"","ajaxurl":"","theme_url":"https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/","slide_speed":"5000","lightbox":"1","user_card_height":"356","video_height":"482","fixed_sidebar":"1","login_url":"/admin","register_url":"/","errors":{"require":"\u4e0d\u80fd\u4e3a\u7a7a","email":"\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u7535\u5b50\u90ae\u7bb1","pls_enter":"\u8bf7\u8f93\u5165","password":"\u5bc6\u7801\u5fc5\u987b\u4e3a6~32\u4e2a\u5b57\u7b26","passcheck":"\u4e24\u6b21\u5bc6\u7801\u8f93\u5165\u4e0d\u4e00\u81f4","phone":"\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u624b\u673a\u53f7\u7801","terms":"Please read and agree with the terms","sms_code":"\u9a8c\u8bc1\u7801\u9519\u8bef","captcha_verify":"\u8bf7\u70b9\u51fb\u6309\u94ae\u8fdb\u884c\u9a8c\u8bc1","captcha_fail":"\u70b9\u51fb\u9a8c\u8bc1\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5","nonce":"\u968f\u673a\u6570\u6821\u9a8c\u5931\u8d25","req_error":"\u8bf7\u6c42\u5931\u8d25"},"follow_btn":"<i class=\"wpcom-icon wi\"><svg aria-hidden=\"true\"><use xlink:href=\"#wi-add\"><\/use><\/svg><\/i>\u5173\u6ce8","followed_btn":"\u5df2\u5173\u6ce8","user_card":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='{{ &OPT.theme_github_path }}JustNews/files/main.js?ver=6.1.2' id='main-js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/main.js?ver=6.1.2' id='main-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.6/wp-includes/js/comment-reply.min.js?ver=5.6' id='comment-reply-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/idiotWu/jQuery-TOC@0.0.6/dist/jquery.toc.min.js?ver=1.0.1' id='githuber-toc-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/WordPress/WordPress@5.5.3/wp-includes/js/clipboard.min.js?ver=5.6' id='clipboard-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/emojify.js@1.1.0/dist/js/emojify.min.js?ver=1.1.0' id='emojify-js'></script>
-<script type='text/javascript' src='{{ &OPT.theme_github_path }}JustNews/files/wp-embed.js?ver=6.1.2' id='wp-embed-js'></script>
-<script type='text/javascript' src='{{ &OPT.theme_github_path }}JustNews/files/lazySizesConfig.js?ver=3.4.9' id='lazysizes-config-js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/wp-embed.js?ver=6.1.2' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/lazySizesConfig.js?ver=3.4.9' id='lazysizes-config-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/aFarkas/lazysizes@5.2.2/plugins/unveilhooks/ls.unveilhooks.min.js?ver=5.6' id='unveilhooks-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/aFarkas/lazysizes@5.2.2/plugins/bgset/ls.bgset.min.js?ver=5.6' id='bgset-js'></script>
 <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/aFarkas/lazysizes@5.2.2/lazysizes.min.js?ver=5.6' id='lazysizes-js'></script>
@@ -243,7 +323,7 @@ var _wpcom_js = {"webp":"","ajaxurl":"","theme_url":"{{ &OPT.theme_github_path }
 var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom":"inline","fifu_is_product":"","fifu_is_flatsome_active":"","fifu_rest_url":"","fifu_nonce":"96a15ffec7"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='{{ &OPT.theme_github_path }}JustNews/files/image.js?ver=3.4.9' id='fifu-image-js-js'></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Arronlong/cfblog-plus@master/themes/JustNews/files/image.js?ver=3.4.9' id='fifu-image-js-js'></script>
 
 
 
@@ -268,7 +348,8 @@ var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom"
 			</script>
 <script>hljs.initHighlightingOnLoad(); //代码高亮
 					</script>
-		{{ &OPT.codeBeforBody }}
+		
+  
 	</body>
 
 </html>
