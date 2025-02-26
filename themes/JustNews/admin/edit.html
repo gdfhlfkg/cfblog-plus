@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/editor.md@1.5.0/css/editormd.css" />
     <link rel="stylesheet" href="https://cdn.staticfile.net/bootstrap-select/1.9.4/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+     <script>
+    MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     
     <script src="https://cdn.staticfile.net/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.staticfile.net/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -161,7 +168,16 @@
         });
     }
 </script>
-  
+  <script>
+      // 1. 调用 parse 方法，将对应的 markdown 文本内容转译为 html 页面；
+  	let parsedHtml = marked.parse(`When $a \\ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+        $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$`);
+ 
+    document.getElementById('content').innerHTML = parsedHtml; // 新增页面
+
+    // 2. 执行 mathjax 渲染
+    MathJax.typeset();
+    </script>
 </body>
 
 </html>
