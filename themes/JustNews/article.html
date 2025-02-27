@@ -9,10 +9,17 @@
 		<meta name="keywords" content="{{ &keyWords }}" />
 		<meta name="description" content="{{ &OPT.siteDescription }}" />
    		<script>
-    		MathJax = {
-		tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    		};
-    		</script>
+		MathJax = {
+    		tex: {
+        		inlineMath: [['$', '$'], ['\\(', '\\)']],
+        		tags: 'ams' // 允许自动编号
+    		},
+    		options: {
+        		ignoreHtmlClass: 'editormd-tex', // 忽略可能冲突的类名
+        		processHtmlClass: 'mathjax'      // 指定需要处理的类名
+    		}
+		};
+		</script>
     		<script id="MathJax-script" async src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     		<script src="https://fastly.jsdelivr.net/npm/marked/marked.min.js"></script>
 		
