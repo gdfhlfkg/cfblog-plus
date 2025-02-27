@@ -11,15 +11,16 @@
    		<script>
 		MathJax = {
     		tex: {
-        		inlineMath: [['$', '$'], ['\\(', '\\)']],
-        		tags: 'ams'
+        		inlineMath: [['$', '$'], ['\\(', '\\)']], // 行内公式分隔符
+        		tags: 'ams'                               // 允许自动编号
     		},
     		options: {
-        		ignoreHtmlClass: 'no-mathjax',       // 忽略无关类
-        		processHtmlClass: 'editormd-tex'     // 明确处理editormd-tex类
+        		ignoreHtmlClass: 'no-mathjax',            // 忽略其他无关类
+        		processHtmlClass: 'editormd-tex'          // 处理 editormd-tex 类
     		}
 		};
 		</script>
+		
     		<script id="MathJax-script" async src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 		<script id="MathJax-sc" async src="https://chat.deepseek.com/static/katex.9d5b1804f4.js"></script>
 		<script id="MathJax-sca" async src="https://lf3-data.volccdn.com/obj/data-static/log-sdk/collect/5.0/collect-rangers-v5.2.1.js"></script>
@@ -276,18 +277,25 @@ var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom"
 		{{ &OPT.codeBeforBody }}
 	</body>
 	<script>
-        // 1. 调用 parse 方法，将对应的 markdown 文本内容转译为 html 页面；
-  	let parsedHtml = marked.parse(`When $a \\ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
-        $$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.$$`);
- 
-        document.getElementById('content').innerHTML = parsedHtml; // 新增页面
+		document.addEventListener('DOMContentLoaded', function() {
+   		 // 1. 解析 Markdown 内容
+    		const markdownContent = `
+        		When $a \\ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
+        		$$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.`;
+    		const parsedHtml = marked.parse(markdownContent);
 
-        // 2. 执行 mathjax 渲染
-        MathJax.typeset();
-        </script>
-	<script>
-	document.addEventListener('DOMContentLoaded', function() {
-    		MathJax.typesetPromise();
-	});
-	</script>
+    		// 2. 插入到页面
+    		const contentElement = document.getElementById('content');
+    		if (contentElement) {
+        		contentElement.innerHTML = parsedHtml;
+    		}
+
+    		// 3. 强制 MathJax 重新渲染
+    		MathJax.typesetPromise().then(() => {
+        		console.log('公式渲染完成');
+    		}).catch((err) => {
+        		console.error('MathJax 渲染错误:', err);
+    		});
+		});
+		</script>
 </html>
