@@ -277,7 +277,7 @@ var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom"
 		{{ &OPT.codeBeforBody }}
 	</body>
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('MutationObserver', function() {
    		 // 1. 解析 Markdown 内容
     		const markdownContent = `
         		When $a \\ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
