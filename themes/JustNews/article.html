@@ -12,11 +12,11 @@
 		MathJax = {
     		tex: {
         		inlineMath: [['$', '$'], ['\\(', '\\)']],
-        		tags: 'ams' // 允许自动编号
+        		tags: 'ams'
     		},
     		options: {
-        		ignoreHtmlClass: 'editormd-tex', // 忽略可能冲突的类名
-        		processHtmlClass: 'mathjax'      // 指定需要处理的类名
+        		ignoreHtmlClass: 'no-mathjax',       // 忽略无关类
+        		processHtmlClass: 'editormd-tex'     // 明确处理editormd-tex类
     		}
 		};
 		</script>
@@ -281,6 +281,10 @@ var fifuImageVars = {"fifu_lazy":"1","fifu_woo_lbox_enabled":"1","fifu_woo_zoom"
 
         // 2. 执行 mathjax 渲染
         MathJax.typeset();
-    </script>
-
+        </script>
+	<script>
+	document.addEventListener('DOMContentLoaded', function() {
+    		MathJax.typesetPromise();
+	});
+	</script>
 </html>
